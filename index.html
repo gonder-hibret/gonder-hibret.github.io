@@ -4,17 +4,36 @@
 		<title>Gonder Hibret of Seattle</title>
 		<!-- link to main stylesheet -->
         	<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style media="screen">
+		  html {
+        text-align: center;
+      }
+
+      #msg {
+        line-height: 1.5em;
+      }
+
+      #date {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+		</style>
 
 	</head>
 	<body>
 	  <h1>Goner Hibret of Seattle</h1>
-	  <span id="date">July 23, 2016</span>
-	  <div id="msg">Urgent General Meeting on Sunday August 7 2016 @3pm.
-Greetings to you all!
-Congratulations on the peaceful and very historic demonstration of the people of Gonder. Our people made all Ethiopians proud! However we know that the hard work is ahead of us. Woyane is publicly dismissing the peaceful and legal quest of Wolqait+Tegede+Telemt. This is critical time to come together and get ready for the struggle until we secure our FREEDOM.
-The Gonder Hibret of Seattle is inviting all the people of Gonder in the greater Seattle area for an URGENT GENERAL ASSEMBLY meeting. 
-Date፡ Sunday August 7 2016 @3pm
-Place: 1223 East Spruce Street.</div>
+	  <div id="date">July 23, 2016</div>
+	  <div id="msg">Message Board.......</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      $.get('https://api.github.com/users/caspyin', function(data) {
+        console.log(data);
+        document.getElementById("msg").innerHTML = data.login;
+      })
+
+
+    })();
+  </script>
 	</body>
 </html>
