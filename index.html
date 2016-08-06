@@ -27,7 +27,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript">
     (function() {
-      $.get('https://localhost:3000/sms/message', function(data) {
+      $.get('http://localhost:3000/sms/message', function(data) {
         console.log(data);
         document.getElementById("msg").innerHTML = data.login;
       })
