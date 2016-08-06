@@ -30,7 +30,8 @@
       $.get('https://gondar-sms.herokuapp.com/sms/message', function(data) {
         console.log(data);
         console.log(typeof data);
-        document.getElementById("msg").innerHTML = data.text;
+        document.getElementById("msg").innerHTML = data.data.text;
+        document.getElementById("date").innerHTML = data.data.date;
       })
 
 
