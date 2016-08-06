@@ -28,7 +28,7 @@
   <script type="text/javascript">
     (function() {
       $.get('https://gondar-sms.herokuapp.com/sms/message', function(data) {
-        console.log(data);
+        console.log(data.text);
         document.getElementById("msg").innerHTML = data.login;
       })
 
